@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import FriendList from './components/FriendList';
 import Login from './components/Login';
+import AddFriend from './components/AddFriend';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
         {/* Protected Route */}
         <PrivateRoute exact path="/protected" component={FriendList} />
         <Route path="/login" component={Login} />
-        <Route component={Login} />
+        {/* <Route component={Login} /> */}
       </Switch>
+      <Route exact path="/add-friend" component={AddFriend} />
     </div>
   );
 }
